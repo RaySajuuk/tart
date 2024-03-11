@@ -16,7 +16,7 @@ builds:
     goarch:
       - arm64
       - amd64
-    binary: tart.app/Contents/MacOS/tart
+    binary: Tart.app/Contents/MacOS/Tart
     prebuilt:
       path: '.build/{{- if eq .Arch "arm64" }}arm64{{- else }}x86_64{{ end }}-apple-macosx/release/tart'
 
@@ -24,7 +24,13 @@ archives:
   - name_template: "{{ .ProjectName }}-{{ .Arch }}"
     files:
       - src: Resources/embedded.provisionprofile
-        dst: tart.app/Contents
+        dst: Tart.app/Contents
+        strip_parent: true
+      - src: Resources/Info.plist
+        dst: Tart.app/Contents
+        strip_parent: true
+      - src: Resources/AppIcon.png
+        dst: Tart.app/Resources
         strip_parent: true
       - LICENSE
 
@@ -45,6 +51,6 @@ brews:
       - "cirruslabs/cli/softnet"
     install: |
       libexec.install Dir["*"]
-      bin.write_exec_script "#{libexec}/tart.app/Contents/MacOS/tart"
+      bin.write_exec_script "#{libexec}/Tart.app/Contents/MacOS/Tart"
     custom_block: |
       depends_on :macos => :ventura

@@ -17,12 +17,12 @@ tart run sonoma-base
     ```bash
     curl -LO https://github.com/cirruslabs/tart/releases/latest/download/tart.tar.gz
     tar -xzvf tart.tar.gz
-    ./tart.app/Contents/MacOS/tart clone ghcr.io/cirruslabs/macos-sonoma-base:latest sonoma-base
-    ./tart.app/Contents/MacOS/tart run sonoma-base
+    ./Tart.app/Contents/MacOS/Tart clone ghcr.io/cirruslabs/macos-sonoma-base:latest sonoma-base
+    ./Tart.app/Contents/MacOS/Tart run sonoma-base
     ```
 
-    Please note that `./tart.app/Contents/MacOS/tart` binary is required to be used in order to trick macOS
-    to pick `tart.app/Contents/embedded.provisionprofile` for elevated privileges that Tart needs.
+    Please note that `./Tart.app/Contents/MacOS/Tart` binary is required to be used in order to trick macOS
+    to pick `Tart.app/Contents/embedded.provisionprofile` for elevated privileges that Tart needs.
 
 <p align="center">
   <img src="https://github.com/cirruslabs/tart/raw/main/Resources/TartScreenshot.png"/>
