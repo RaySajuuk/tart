@@ -5,8 +5,8 @@
 
 set -e
 
-swift build --product tart
-codesign --sign - --entitlements Resources/tart-dev.entitlements --force .build/debug/tart
+swift build --product Tart
+codesign --sign - --entitlements Resources/tart-dev.entitlements --force .build/debug/Tart
 
 rm -Rf .build/Tart.app/
 mkdir -p .build/Tart.app/Contents/MacOS .build/Tart.app/Contents/Resources
@@ -15,4 +15,4 @@ cp -c Resources/embedded.provisionprofile .build/Tart.app/Contents/embedded.prov
 cp -c Resources/Info.plist .build/Tart.app/Contents/Info.plist
 cp -c Resources/AppIcon.png .build/Tart.app/Contents/Resources
 
-.build/Tart.app/Contents/MacOS/tart "$@"
+.build/Tart.app/Contents/MacOS/Tart "$@"

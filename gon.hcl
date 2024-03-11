@@ -1,6 +1,6 @@
 source = [
-  ".build/x86_64-apple-macosx/release/tart",
-  ".build/arm64-apple-macosx/release/tart"
+  ".build/x86_64-apple-macosx/release/Tart",
+  ".build/arm64-apple-macosx/release/Tart"
 ]
 bundle_id = "com.github.cirruslabs.tart"
 

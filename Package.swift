@@ -7,7 +7,7 @@ let package = Package(
     .macOS(.v13)
   ],
   products: [
-    .executable(name: "tart", targets: ["tart"])
+    .executable(name: "Tart", targets: ["Tart"])
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-argument-parser", from: "1.1.2"),
@@ -24,7 +24,7 @@ let package = Package(
     .package(url: "https://github.com/orchetect/SwiftRadix", from: "1.3.0")
   ],
   targets: [
-    .executableTarget(name: "tart", dependencies: [
+    .executableTarget(name: "Tart", dependencies: [
       .product(name: "Algorithms", package: "swift-algorithms"),
       .product(name: "AsyncAlgorithms", package: "swift-async-algorithms"),
       .product(name: "ArgumentParser", package: "swift-argument-parser"),
@@ -44,6 +44,6 @@ let package = Package(
       "OCI/Reference/Generated/ReferenceLexer.interp",
       "OCI/Reference/Generated/ReferenceLexer.tokens",
     ]),
-    .testTarget(name: "TartTests", dependencies: ["tart"])
+    .testTarget(name: "TartTests", dependencies: ["Tart"])
   ]
 )

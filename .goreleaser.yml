@@ -3,8 +3,8 @@ project_name: tart
 before:
   hooks:
     - .ci/set-version.sh
-    - swift build --arch x86_64 -c release --product tart
-    - swift build --arch arm64 -c release --product tart
+    - swift build --arch x86_64 -c release --product Tart
+    - swift build --arch arm64 -c release --product Tart
     - gon gon.hcl
 
 builds:
@@ -18,7 +18,7 @@ builds:
       - amd64
     binary: Tart.app/Contents/MacOS/Tart
     prebuilt:
-      path: '.build/{{- if eq .Arch "arm64" }}arm64{{- else }}x86_64{{ end }}-apple-macosx/release/tart'
+      path: '.build/{{- if eq .Arch "arm64" }}arm64{{- else }}x86_64{{ end }}-apple-macosx/release/Tart'
 
 archives:
   - name_template: "{{ .ProjectName }}-{{ .Arch }}"
